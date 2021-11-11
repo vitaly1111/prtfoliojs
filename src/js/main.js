@@ -1,10 +1,12 @@
+import {galery} from './galery'
+
 
 const presentOrderBtn=document.querySelector('.present__order-btn')
 const pageOverlayModal=document.querySelector('.page__overlay_modal');
 const modalClose=document.querySelector('.modal__close');
 const headerBurger=document.querySelector('.header__contacts-burger')
 const headerContacts=document.querySelector('.header__contacts')
-
+  
 /* const closeModal=()=>{
 	pageOverlayModal.classList.remove('page__overlay_modal_open')
 }
@@ -15,7 +17,7 @@ presentOrderBtn.addEventListener('click',()=>{
 
 modalClose.addEventListener('click',()=>{closeModal()}) */
 
-const disableScroll=()=>{
+export const disableScroll=()=>{
 	const widthScroll=window.innerWidth-document.body.offsetWidth;
 	document.body.scrollPosition=window.scrollY
 	document.body.style=`
@@ -27,7 +29,7 @@ const disableScroll=()=>{
 	width:100vw;
 	padding-right:${widthScroll}px;`
 }
-const enableScroll=()=>{
+export const enableScroll=()=>{
  document.body.style='position: relative';
  window.scroll({top: document.body.scrollPosition})
 }
@@ -93,5 +95,7 @@ const heandlerBurger=(openBtn,menu,openSelector)=>{
 heandlerBurger(headerBurger,headerContacts,'header__contacts_open')
 
 console.log(presentOrderBtn)
+
+galery()
 
 //# sourceMappingURL=main.js.map
