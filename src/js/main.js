@@ -1,4 +1,8 @@
+import "core-js/stable";
+import "regenerator-runtime/runtime";
+
 import {galery} from './galery'
+import {cards} from './card'
 
 
 const presentOrderBtn=document.querySelector('.present__order-btn')
@@ -97,5 +101,6 @@ heandlerBurger(headerBurger,headerContacts,'header__contacts_open')
 console.log(presentOrderBtn)
 
 galery()
+cards()
 
 //# sourceMappingURL=main.js.map
